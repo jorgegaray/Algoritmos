@@ -17,15 +17,15 @@ void djistra(int start){
 	q.push(start);
 	dist[start]=make_pair(0,0);
 	while(!q.empty()){
-		v=q.front();
-		l=listAdj[v].size();
+		v=q.front();                     // nodo v ----> u
+		l=listAdj[v].size();		// cantidad de nodos adyacentes a v
 		q.pop();
 		for(i=0; i<l; i++){
 			u=listAdj[v][i].first;  // nodo de llegada
 			p=listAdj[v][i].second;  // peso entre v y u
 
 			if(dist[v].first + p < dist[u].first){
-				dist[u].first=dist[v].first + p;
+				dist[u].first=dist[v].first + p;  
 				dist[u].second=v;
 				q.push(u);
 			}
@@ -41,7 +41,7 @@ int main(){
 	listAdj.resize(V+1);
 	dist.resize(V+1);
 	for(i=0;i<=V;i++)
-		dist[i]=make_pair(1e9,0);
+		dist[i]=make_pair(1e9,0);  // inicializacion
 
 	for(i=0; i<E; i++){
 		scanf("%d %d %d",&u,&v,&p);
