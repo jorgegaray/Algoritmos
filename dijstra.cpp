@@ -4,7 +4,7 @@ typedef pair<int,int> pi;
 /**********************
 DIJSTRA CAMINO MINIMO
 CON RECONSTRUCION DEL
-CAMINO
+CAMINO, GRAFO CONEXO
 jorgegaraych@gmail.com
 *********************/
 
