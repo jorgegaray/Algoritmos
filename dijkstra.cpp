@@ -2,7 +2,7 @@
 using namespace std;
 typedef pair<int,int> pi;
 /**********************
-DIJSTRA CAMINO MINIMO
+DIJKSTRA CAMINO MINIMO
 CON RECONSTRUCION DEL
 CAMINO, GRAFO CONEXO
 jorgegaraych@gmail.com
@@ -22,7 +22,7 @@ void djistra(int start){
 		l=listAdj[v].size();		// cantidad de nodos adyacentes a v
 		q.pop();
 		for(i=0; i<l; i++){
-			u=listAdj[v][i].first;  // nodo de llegada
+			u=listAdj[v][i].first;  // nodo de llegada u
 			p=listAdj[v][i].second;  // peso entre v y u
 
 			if(dist[v].first + p < dist[u].first){
