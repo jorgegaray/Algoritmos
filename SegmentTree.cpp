@@ -95,10 +95,10 @@ int main(){
 	p_min_root=buildSegmentTree(1,0,N-1);
 	struct Node root= Node(1,0,N-1,p_min_root); // node root name=1 range [0, N-1] , value=p_min_root
 
-	// RMQ (root , i, j)  range [i,j]   range [ 0, N-1 ]
+	// RMQ (root , i, j)  range [i,j]    0 <= i <= j < N
 	//update (root, position, value) update in position by this value
-	for(i=0;i<C;i++){
-		scanf("%d %d %d",&a,&u,&v);
+	for(i=0;i<C;i++){			// numbers of consults
+		scanf("%d %d %d",&a,&u,&v);     // type of consults a=0 RMQ a=1 update
 		if(a==0)
 			printf("RMQ(%d,%d)= %d\n",u,v,RMQ(root,u,v));
 		else
