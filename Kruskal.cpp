@@ -59,8 +59,8 @@ int main(){
 /******************
 EXAMPLE
 INPUT
-5 7
-1 5 1
+5 7         // V vertices E edges
+1 5 1	    // node u  node v  weight
 1 3 5
 5 3 1
 5 2 3
